@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="designLogo">
+          <img
+            src="./media/360_F_331938599_nmkc39B7E74s1G5P01b0YCJ6x0MNMqJz (2).jpg"
+            alt="..."
+          />
+        </div>
+        <div class="addProductItem" id="dropdown">
+          Add product <i class="fa-solid fa-angle-up" id="dropIcon"></i>
+          <div class="addProduct" id="dropContent">
+            <input
+              type="text"
+              name="title"
+              id="title"
+              class="productInp"
+              placeholder="Enter product name"
+            />
+            <input
+              type="text"
+              name="imgUrl"
+              id="imgInp"
+              class="productInp"
+              placeholder="Enter product img url"
+            />
+            <input
+              type="text"
+              name="price"
+              id="priceInp"
+              class="productInp"
+              placeholder="Enter product price"
+            />
+            <input
+              type="number"
+              name="iteam"
+              id="itemInp"
+              class="productInp"
+              placeholder="Enter product item"
+            />
+            <button onclick="addProduct()">Add product</button>
+          </div>
+        </div>
+        <div class="searchItem">
+          <button>
+            <i class="fa-solid fa-search"></i>
+          </button>
+          <input
+            onkeyup="search()"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+          />
+        </div>
+        <div class="account">
+          <div class="accountImg">
+              <button id="accountImg">
+                <img
+                  src=""
+                  id="userImg1"
+                  alt="..."
+                />
+              </button>
+            </div>
+            <div id="accountName">
+              <p id="userName">Alitech</p>
+            </div>
+            <i class="fa-solid fa-angle-up dropIcon"></i>
+            <div class="dropAccount">
+              <div id="accountImg">
+                <div class="userAddImg">
+                  <img
+                    src="./media/photo_2022-06-17_21-34-26.jpg"
+                    alt="..."
+                    id="userImg2"
+                  />
+                </div>
+                <label for="imageUpload" id="imageUploadLabel">
+                  <i class="fa-solid fa-plus plus"></i>
+                </label>
+                <input
+                  type="file"
+                  id="imageUpload"
+                  accept="image/*"
+                  onchange="changeUserImg.call(this)"
+                />
+              </div>
+            <p id="userName">Alitech</p>
+            <!-- <div class="addAccount">
+              <button onclick="addAccount()">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div> -->
+            <div class="logOutAccount">
+              <button onclick="logOutAccount()">Log Out</button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+      
+    <main>
+      <button onclick="showBuyProduct()" id="showCartList">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="notifBage"></span>
+      </button>
+      <section class="landing">
+        <div id="productList"></div>
+        <div id="cartList"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
